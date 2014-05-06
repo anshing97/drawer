@@ -26,7 +26,7 @@ function Drawer(element) {
   };
 
   function showCollapsed () {
-  	$element.animate({"height":10},350,function(){
+  	$element.animate({"height":20},350,function(){
   		state = COLLAPSED;
   		showRestingTimeout();
   	});
@@ -83,15 +83,16 @@ function Drawer(element) {
     }
   }
 
-  new Hammer($element, { dragLockToAxis: true }).on("release dragup dragdown swipeup swipedown", handleHammer);
+  var options = { dragLockToAxis: false };
+  new Hammer($element,options).on("release dragup dragdown swipeup swipedown", handleHammer);
 }
 
+// prevent webview from bouncing 
+document.ontouchmove = function(event){
+   event.preventDefault();
+}
 
+// ready 
 $(function() {
-
-
 	var drawer = new Drawer("footer");
-
-
-
 });
