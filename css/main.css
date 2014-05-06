@@ -7,9 +7,6 @@ html {
   position: relative;
   min-height: 100%;
 }
-body {
-  margin: 0 0 90px; /* bottom = footer height */
-}
 
 article {
 	background: url(../images/app_bg.png) no-repeat 0 0 fixed;
@@ -24,7 +21,7 @@ footer {
 
   left: 0;
   bottom: 0;
-  height: 90px;
+  height: 0px;
   width: 100%;
 
 	background: #FFFFFF;

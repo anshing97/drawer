@@ -11,13 +11,23 @@ function Drawer(element) {
   var state = RESTING; 
   var timeout; 
 
+  this.init = function () {
+  	bounceDrawer(); 
+  };
+
+  function bounceDrawer () {
+  	$element.animate({"height":90},350,function(){
+  		state = RESTING; 
+  	});
+  };  
+
   function showRestingTimeout() {
   	timeout = setTimeout(showResting,3000);
-  }
+  };
 
   function cancelRestingTimeout() {
   	clearInterval(timeout);
-  }
+  };
 
   function showExpanded () {
   	$element.animate({"height":250},350,function(){
@@ -95,4 +105,6 @@ document.ontouchmove = function(event){
 // ready 
 $(function() {
 	var drawer = new Drawer("footer");
+
+	setTimeout(drawer.init,1500);
 });
