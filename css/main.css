@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 90px; /* bottom = footer height */
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+
+	background: #FFFFFF;
+	-moz-box-shadow:    0px -2px 15px 0px rgba(108,108,108,0.50);
+	box-shadow:         0px -2px 15px 0px rgba(108,108,108,0.50);
+}
+
+
+
